@@ -62,6 +62,20 @@ li
 }
 
 
+#right
+{
+ position:relative;
+ float:right;
+}
+
+#right1
+{
+  
+    position:relative;
+    float:right;
+    margin:0 10px 0 10px;
+   
+}
 /*drop down/sub menus*/
 .navigation li ul 
 {
