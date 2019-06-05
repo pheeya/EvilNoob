@@ -121,18 +121,6 @@ width:100%;
   
 }
 
-.navigation li ul li
-{
-  
-  color:black;
-  padding:14px 28px 14px 28px;
- 
-  opacity:1;
-  margin-top:2px;
-  background-color:rgba(1,1,1,0);
-  display:inline-block;
-  
-}
 
 .navigation li ul
 {
@@ -146,10 +134,28 @@ width:100%;
 
 }
 
+
+.navigation li ul li
+{
+  
+  color:black;
+  padding:14px 28px 14px 28px;
+  
+  opacity:1;
+  margin-top:2px;
+  background-color:rgba(1,1,1,0);
+  display:inline-block;
+  
+  margin:20px;
+ 
+}
+
+
+
 .navigation img
 {
   position:relative;
-  left:45px;
+  
   opacity:1;
   
 }
