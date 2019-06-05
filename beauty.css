@@ -7,6 +7,7 @@ html
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+   
 }
 
 
@@ -18,7 +19,8 @@ body
     padding:0;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size:27px;
-   
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* ----------- top navigation bar  ----------------*/
@@ -53,6 +55,7 @@ body
     
     z-index:999;
     font-size:20px;
+    
 }
 
 .navigation a
@@ -114,20 +117,22 @@ li
   display:none;
   background-color:rgba(5,2,1,1);
   border-bottom:2px solid white;
-  
+  width:100%;
   
 }
 
 .navigation li ul li
 {
-  display:inline-block;
+  
   color:black;
   padding:14px 38px 14px 37px;
- height:170px;
-  width:200px;
-  margin:-2px;
+ height:auto;
+ 
+  margin:auto;
+  
   margin-top:2px;
   background-color:rgba(1,1,1,0);
+  display:inline-block;
 }
 
 .navigation li ul
@@ -135,13 +140,17 @@ li
   background-color:rgba(1,1,1,1);
   opacity:1;
   border:0;
+  
+  margin:0;
+  
   height:auto;
+  
 }
 
 .navigation img
 {
   position:relative;
-  left:-14px;
+  left:45px;
   opacity:1;
   
 }
@@ -557,14 +566,8 @@ text-align:center;
 
 
 
-  @media screen and (max-width: 945px)
-  {
-    .navigation ul
-  {
-   font-size:15px;
-  }
 
-}
+
 
 @media screen and (max-width: 1439px)
 {
