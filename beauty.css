@@ -20,8 +20,9 @@ body
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size:27px;
     max-width: 100%;
-    overflow-x: hidden;
-}
+    overflow-x:hidden;
+   background-color:black;
+  }
 
 /* ----------- top navigation bar  ----------------*/
 
@@ -55,12 +56,13 @@ body
     
     z-index:999;
     font-size:20px;
-    
+    font-family:Helvetica;
 }
 
 .navigation a
 {
   text-decoration:none;
+  
 }
 
 .navigation ul
@@ -71,17 +73,23 @@ body
     margin:0px;
     border-bottom:2px solid gray;
     
+    height:43px;
     
 }
 
-li
+.navigation ul li
 {
     display:inline-block;
    margin:0;
    padding:0 20px 0 20px;
    color:white;
-   background-color:red;
+  
    
+}
+
+.navigation a:hover   
+{
+ color:darkgray;
 }
 
 /* ----------- the two tabs on the right  ----------------*/
@@ -100,8 +108,14 @@ li
    
 }
 
-
-
+#right:hover
+{
+  color:darkgray;
+}
+#right1:hover 
+{
+  color:darkgray;
+}
 
 /* ----------- drop down menus on the Games navigation tab ----------------*/
 .navigation li ul 
@@ -132,6 +146,11 @@ width:100%;
   
   height:auto;
 
+
+
+  
+    
+   
 }
 
 
@@ -166,14 +185,19 @@ width:100%;
 {
   display:inline-block;
   opacity:1;
+  
 }
 
 .navigation:hover
 {
-  opacity:.8;
+  opacity:.9;
   
 }
 
+.navigation ul li ul li img:hover
+{
+  border:.1px solid white;
+}
 
 
 
@@ -187,20 +211,17 @@ width:100%;
     background-position:center;
     color:white;
     height:auto;
-    border:2px solid red;
     
     
- 
+    font-family:Helvetica;
+  
 }
-
 
 
 #Games  /* this is the games section's caption */
 {
-  position:relative;
-  top:30px;
-  left:85px;
   font-size:35px;
+  margin:20px;
 }
 .gamelist a
 {
@@ -210,90 +231,215 @@ width:100%;
  
 }
 
+
+
+
+
 .gamelist li
 {
+  display:inline-block;
+  margin:0;
+  padding:0 20px 0 20px;
+  color:white;
+  background-color:red;
+  
+  
+  
   margin:45px;
   padding:0;
   padding-bottom:0;
   height:200px;
   margin-top:80px;
  
+  
+  
 }
-
-
+.gamelist img
+{
+  
+  border:2px solid gray;
+}
+.gamelist img:hover
+{
+  border:2px solid white;
+}
 
 /* the single line div */
 
 .singleLine
 
 {
- 
-  color:black;
+  font-family:Helvetica;
+  color:white;
   position:relative;
  font-size:20px;
 padding:20px;
- background-color:white;
+ background-color:black;
 text-align:center;
- 
+border-top:1px solid white;
+border-bottom:1px solid white; 
+
+
+width:80%;
+margin:0 auto;
+opacity:.8;
+margin-top:70px;
+margin-bottom:70px;
 }
 
 /*----------------- Top Stores Div -----------*/
-#stories /* the Top Stories caption */
-{
-  position:relative;
-
-  left:85px;
-  font-size:35px;
-  
-}
 
 .stories
 {
-  
-  position:relative;
   background-color:black;
-  height:659px;
-  border:2px solid red;
   padding:0;
   margin:0;
-
+  height:659px;
+  
 }
-
-
-.stories a
-{
-  text-decoration:none;
-  color:white;
-   
-}
-
 .stories ul
 {
-  padding:0;
+  display:flex;
+  flex-direction:row;
+  list-style-type:none;
   margin:0;
-  display:inline-block;
-  width:100%;
+  padding:0;
+ 
+}
+
+.stories li
+
+{
+  margin:20px;
+  margin-top:100px;
+  border:1px solid white;
   
 }
-.stories li
-{
- 
-  height:400px;
-  width:398px;
-  padding:0;
+.stories figure
 
-  margin:120px 0px 0px 0px;
+{
+  margin:0;
+  padding:0;
+}
+
+.stories text
+{
+  color:white;
+  font-family:Helvetica;
+  font-size:35px;
+  margin:20px;
   position:relative;
-  left:-100px;
-  padding-right:0;
-  margin-right:0;
+  top:25px;
+  
+}
+.stories text a 
+{
+  text-decoration: none;
+}
+.stories div
+{
+  height:414px;
+  background:black;
+  
+  
+  position:relative;
+  top:100px;
+ 
+}
+.stories div div
+
+{
+  background:black;
+  height:214px;
+  margin:0;
+  padding:0;
+  
+}
+
+.stories div div 
+{
+  padding:0;
+  margin:0;
+  position:relative;
+  top:0;
+  background:black;
+  
+}
+
+.stories div div ul
+{
+  padding:0;
+  margin:0;
+  background:black;
+  height:100%;
+  display:flex;
+  flex-direction:row;
+  
+}
+
+.stories div div ul li
+
+{
+  padding:0;
+  margin:0;
+  background:yellow;
+  width:426px;
+  margin:20px;
+  height:214px;
+  margin-top:0;
+ 
+}
+
+.stories story_text
+{
+  margin:30px;
+  position:relative;
+  top:20px;
 }
 
 .stories img
 {
-  width:398px;
-  height:400px;
+  width:100%;
+  height:214px;
 }
+
+.stories div div a
+
+{
+  text-decoration:none;
+
+}
+
+figcaption
+{
+ 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:25px;
+  width:406px;
+  color:white;
+  height:200px;
+  border:1px solid white;
+  position:relative;
+  left:-1px;
+  top:-5px;
+  background:black;
+  padding:10px;
+}
+figcaption p
+{
+  color:gray;
+  font-size:15px;
+  margin-bottom:5px;
+  
+}
+
+
+.stories li:hover
+{
+ border:1px solid red;
+}
+
+
 
 /* ----------- Create Worlds Div  ----------------*/
 
@@ -322,11 +468,32 @@ text-align:center;
 {
   height:527px;
   background-color:black;
-  border:2px solid red;
+ 
  color:white;
  padding:50px;
 }
 
+.page_end ul
+{
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:row;
+ position:relative;
+ top:220px;
+
+ 
+
+}
+
+.page_end ul li
+{
+  list-style-type:none;
+  margin:auto;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:17px;
+ 
+}
 
 
 
@@ -368,7 +535,7 @@ text-align:center;
   float: left;
   width: 100%;
   border: 0;
- 
+  
   }
 
   .rslides1_nav {
@@ -568,46 +735,150 @@ text-align:center;
   }
 
 
+/* --------less than 1400 pixels----------- */
 
-
-
-
-
-
-@media screen and (max-width: 1439px)
-{
-  .stories
-{
-  height:auto;
-}
- .stories ul {
-   display:block;
-    background:black;
-    
-  }
-
-  .stories img 
+  @media screen and (max-width:1400px)
   {
-  width:100%;
-  height:100%;
-   
-    
-  }
-   .stories li 
+   .stories div
    {
-    display:block;
-    margin-left:350px;
-    margin-bottom:20px;
-     
+     width:50%;
    }
- }
- 
+   .stories div div
+   {
+     width:50%;
+   }
+   .stories div div ul {
+     width:50%;
+   }
 
- @media screen and (min-width: 1440px)
- {
-   #stories
- {
-  top:-450px;
- }
+   .stories div div ul li 
+   {
+    width:370px;
+   height:185px;
+   }
+   .stories div div ul img 
+   {
+     width:370px;
+     height:185px;
+   }
 
+   .stories figcaption
+   {
+     width:350px;
+   }
+  }
+
+
+
+
+  /* --------less than 1245 pixels----------- */
+  @media screen and (max-width:1245px)
+  {
+   .stories div
+   {
+     width:50%;
+   }
+   .stories div div
+   {
+     width:50%;
+   }
+   .stories div div ul {
+     width:50%;
+   }
+
+   .stories div div ul li 
+   {
+    width:325px;
+   height:164px;
+   }
+   .stories div div ul img 
+   {
+     width:325px;
+     height:164px;
+   }
+
+   .stories figcaption
+   {
+     width:305px;
+   }
+  }
+
+
+
+    /* --------less than 1100 pixels----------- */
+    @media screen and (max-width:1100px)
+    {
+     .stories div
+     {
+       width:50%;
+     }
+     .stories div div
+     {
+       width:50%;
+     }
+     .stories div div ul {
+       width:50%;
+     }
+  
+     .stories div div ul li 
+     {
+      width:250px;
+     height:127px;
+     }
+     .stories div div ul img 
+     {
+       width:250px;
+       height:127px;
+     }
+  
+     .stories figcaption
+     {
+       width:230px;
+     }
+    }
+
+
+      /* --------less than 875 pixels----------- */
+  @media screen and (max-width:875px)
+  {
+   .stories div
+   {
+     width:50%;
+   }
+   .stories div div
+   {
+     width:50%;
+   }
+   .stories div div ul {
+     width:50%;
+   }
+
+   .stories div div ul li 
+   {
+    width:150px;
+   height:77px;
+   }
+   .stories div div ul img 
+   {
+     width:150px;
+     height:77px;
+   }
+
+   .stories figcaption
+   {
+     width:130px;
+     font-size:20px;
+   }
+  }
+
+
+@media screen and (max-width:715px)
+{
+  .navigation
+  {
+   font-size:15px;
+  }
+  .navigation ul li ul 
+  {
+    top:30px;
 }
