@@ -125,7 +125,7 @@ body
   position:absolute;
   left:-30px;
   background:gray;
-  top:39px;
+  top:35px;
 width:100%;
  height:200px;
   display:none;
@@ -146,7 +146,8 @@ width:100%;
   
   height:auto;
 
-
+ 
+ 
 
   
     
@@ -161,12 +162,14 @@ width:100%;
   padding:14px 28px 14px 28px;
   
   opacity:1;
-  margin-top:2px;
+  
   background-color:rgba(1,1,1,0);
   display:inline-block;
   
   margin:20px;
- 
+  margin-top:0px;
+  line-height:20px;
+  
 }
 
 
@@ -733,7 +736,33 @@ figcaption p
     background: #222;
     background: rgba(0, 0, 0, .8);
   }
+.rslides_tabs a
+{
+  text-decoration:none;
+  
+}
 
+.rslides_tabs 
+{
+  text-align:center;
+}
+.rslides_tabs  
+{
+  margin:0;
+  padding:0;
+  position:relative;
+  
+}
+.rslides_tabs li
+{
+ margin:20px;
+ margin-top:5px;
+ margin-bottom:5px;
+ display:inline-block;
+ border:1px solid white;
+ padding:5px;
+ width:30px;
+}
 
 /* --------less than 1400 pixels----------- */
 
@@ -881,4 +910,6 @@ figcaption p
   .navigation ul li ul 
   {
     top:30px;
+}
+
 }
