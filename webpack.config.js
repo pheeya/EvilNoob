@@ -1,13 +1,19 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
     filename: 'build.js'
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Evil Noob',
+      template: 'index.html'
+    })
+  ],
   module: {
     rules: [
       {
