@@ -243,10 +243,11 @@ position:relative;
     opacity:.8;
     position:relative;
      margin-left:20px;
-   margin-top:15%;
+   margin-top:250px;
    margin-bottom:0;
    height:80px;
      transition:all .3s;
+     z-index:0;
 }
 
 #arrowR 
@@ -261,10 +262,11 @@ position:relative;
     opacity:.8;
     position:relative;
      margin-left:20px;
-   margin-top:15%;
+   margin-top:250px;
    margin-bottom:0;
    height:80px;
   transition:all .3s;
+  z-index:0;
 }
 
 

@@ -2,12 +2,12 @@
     <transition name="fade"> <div v-if="showMenu" class="main">
 <div class="menu">
 <ul>
-    <h2 style="margin:0;padding:10px; color:white; font-weight:200;">EvilNoobs</h2>
-    <li><img src="https://blznav.akamaized.net/img/games/logo-codbo4-7794ee86f3e8be3e.png"></li>
-    <li><img src="https://blznav.akamaized.net/img/games/logo-dest2-db71def7c167da44.png"></li>
-    <li><img src="https://blznav.akamaized.net/img/games/logo-heroes-78cae505b7a524fb.png">  </li>
-    <li><img src="https://blznav.akamaized.net/img/games/logo-hs-93512467e87f82c6.png">  </li>
-    <li><img src="https://blznav.akamaized.net/img/games/logo-codmw-d57b296321d6b444.png"></li>
+    <h3 style="margin:0;padding:10px; color:white; font-weight:200;">EvilNoobs</h3>
+    <li><img src="https://blznav.akamaized.net/img/games/logo-codbo4-7794ee86f3e8be3e.png"><h4>GAME1</h4></li>
+    <li><img src="https://blznav.akamaized.net/img/games/logo-dest2-db71def7c167da44.png"><h4>GAME2</h4></li>
+    <li><img src="https://blznav.akamaized.net/img/games/logo-heroes-78cae505b7a524fb.png"><h4>GAME3</h4>  </li>
+    <li><img src="https://blznav.akamaized.net/img/games/logo-hs-93512467e87f82c6.png">  <h4>GAME4</h4></li>
+    <li><img src="https://blznav.akamaized.net/img/games/logo-codmw-d57b296321d6b444.png"><h4>GAME5</h4></li>
  
 
 </ul>
@@ -41,6 +41,11 @@ export default {
 
 <style scoped>
 
+h4  
+{
+    text-align:center;
+    margin:0;
+}
 .fade-enter 
 {
     opacity:0;
@@ -104,7 +109,7 @@ width:100%;
     width:100%;
     box-sizing: border-box;
     background-color: #0d1825f3;
-  
+  text-align:left;
  
 }
 li img 
@@ -116,10 +121,10 @@ ul li
 {
     display:inline-block;
     margin:5px;
-    margin-right:105px;
+   text-align:center;
     color:white;
     padding:30px 0;
-    
+    margin-right:50px;
 }
 
 .footer ul 
@@ -134,4 +139,14 @@ ul li
     margin:5px 20px;
     cursor:pointer;
 }
+
+
+@media (max-width:870px)
+{
+    .main
+    {
+        display:none;
+    }
+}
+
 </style>
