@@ -37,7 +37,7 @@ components:
 #app
 {
   
-
+height:100vh;
 }
 
 </style>
