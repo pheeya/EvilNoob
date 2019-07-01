@@ -6,15 +6,16 @@
   
   <ul id="mainNav">
       <li>LOGO</li>
-      <li>GAMES</li>
+      <li v-on:click= "menu=!menu">GAMES▼</li>
+ 
       <li>SHOP</li>
       <li>NEWS</li>
-      <li>ESPORTS</li>
-    <li id="rightTab">My Account</li>
-      <li id="rightTab">Support</li>
+      <li>ESPORTS▼</li>
+    <li id="rightTab" style="font-size:17px;">My Account</li>
+      <li id="rightTab" style="font-size:17px;">Support</li>
   </ul>
 
-
+  <cmp-drop v-bind:showMenu= "menu"></cmp-drop>
 
 
 
@@ -23,11 +24,17 @@
 </template>
 
 <script>
+import drop from "./subComponents/dropDown"
 export default {
+components: 
+{
+  cmpDrop:drop
+},
+
 data:function ()
 {
     return {
-        
+        menu:true,
         currentNumber:0,
         timer:null,
         
@@ -52,17 +59,17 @@ data:function ()
 
 .main #mainNav
 {
-    padding:2px 35px;
+    padding:2px 42px;
     margin:0;
     list-style-type: none;
-   border-bottom:.1px solid silver;
- background-color:rgba(0, 0, 0, 0.288);
-     color: rgba(255, 255, 255, 0.7);
+
+color:rgba(231, 231, 231, 0.815);
      
- 
+     background: transparent;
+    white-space: nowrap;
 z-index:999;
 position:relative;
-   
+      border-bottom:1px solid rgba(255, 255, 255, 0.219);
   
 }
 
@@ -70,7 +77,7 @@ position:relative;
 .main #mainNav li
 {
     padding:0;
-    margin:15px 19px;
+    margin:15px 15px;
     list-style-type: none;
   font-family: 'Open Sans', sans-serif;
    
@@ -78,11 +85,19 @@ position:relative;
     font-weight: 500;
     display:inline-block;
 cursor:pointer;
-
+transition:all .2s;
 }
+
+.main #mainNav li:hover 
+{
+  color:white;
+}
+
+
 #rightTab
  {
      float:right;
+     
  }
 
 </style>

@@ -28,7 +28,7 @@ data:function ()
         timer:null,
         animName:"slideForwards",
         
-        image:["http://pavbca.com/walldb/original/4/d/2/10125.jpg", "http://pavbca.com/walldb/original/d/b/a/10118.jpg", "http://pavbca.com/walldb/original/8/4/6/10119.jpg"]}
+        image:["https://bnetcmsus-a.akamaihd.net/cms/gallery/KO27VQL5M8EL1560816589144.jpg", "https://bnetcmsus-a.akamaihd.net/cms/gallery/RNICIQUDGMF51561595505381.jpg", "https://bnetcmsus-a.akamaihd.net/cms/gallery/RNICIQUDGMF51561595505381.jpg"]}
 },
 
 mounted: function ()
@@ -102,14 +102,16 @@ background:red;
 
 #slidesIMG 
 {
-    width:100%;
-    max-height: 600px;
+    
+    
     margin:0;
     padding:0;
     position:absolute;
     top:0px;
     z-index:-999;
     overflow: hidden;
+   overflow:-moz-hidden-unscrollable;
+ 
  
 }
 .slideForwards-enter 
@@ -146,7 +148,7 @@ position:relative;
     from{
 
         transform:translateX(100%);
-      
+   
     }
     to 
     {
@@ -160,12 +162,12 @@ position:relative;
     from{
 
         transform:translateX(0);
-  
+
     }
     to 
     {
         transform:translateX(-100%);
-       
+     
     }
 }
 
@@ -205,7 +207,7 @@ position:relative;
 {
     from{
 
-        transform:translateX(-100%);
+        transform:translateX(-180%);
       
     }
     to 
@@ -234,7 +236,7 @@ position:relative;
     width:20px;
     float:left;
     cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(28, 106, 207, 0.767);
     padding:10px;
     border:.1px solid silver;
     margin:200px 10px;
@@ -252,7 +254,7 @@ position:relative;
       width:20px;
     float:right;
     cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.4);
+         background-color: rgba(28, 106, 207, 0.767);
     padding:10px;
     border:.1px solid silver;
     margin:200px 10px;
@@ -268,12 +270,14 @@ position:relative;
 
 #arrowR:hover 
 {
-         background-color: rgba(53, 53, 53, 0.4);
+  opacity:1;
+  background-color: rgb(26, 137, 241);
 }
 
 #arrowL:hover 
 {
-      background-color: rgba(53, 53, 53, 0.4);
+   opacity:1;
+  background-color: rgb(26, 137, 241);
 }
 .parrallax
 {
@@ -282,12 +286,13 @@ position:relative;
  top:-60px;
 position:relative;
 
-    height:37.5vw;
+    height:600px;
+    overflow:hidden;
 }
 .main 
 {
-
-    height:37.5vw;
+ height:540px;
+    
   
     margin:0;
     padding:0;
