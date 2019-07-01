@@ -2,7 +2,7 @@
     <div class="main">
      
 
-        
+      <div class="blackNav">Evil Noobs</div> 
  <div><img id="smolMenu" v-on:click= "showList=!showList" 
  src="https://c.s-microsoft.com/en-us/CMSImages/icon_menu_new.png?version=2e17c0b9-dc99-1d59-c64d-0be30696e854"> 
  <hr id="smolHR" style="margin-top:50px;position:absolute;z-index:99; width:99%">
@@ -75,7 +75,20 @@ methods:
 </script>
 
 <style scoped>
-
+.blackNav 
+{
+    width:100%;
+    position:absolute;
+ height:42.4px;
+    background-color:black;
+    display:none;
+    color:white;
+    text-align:center;
+    font-size:25px;
+    padding-top:10px;
+    z-index:99;
+    font-family: 'Open Sans', sans-serif;
+}
 
 
 #smolHR 
@@ -156,6 +169,10 @@ margin-top:10px;
 display:none;
 }
 #smolMenu,#smolHR
+{
+  display:block;
+}
+.blackNav 
 {
   display:block;
 }

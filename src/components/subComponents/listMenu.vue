@@ -1,6 +1,13 @@
 <template>
-    <div class="main">
-      <transition name="slide">  <div v-if="listMenu" class="back">
+    <transition name="slide">
+    <div v-if="listMenu" class="main">
+        
+         
+           
+          
+          
+            <div  class="back">
+            
         <ul>
             <li>GAMES</li>
             <li>SHOP</li>
@@ -12,8 +19,8 @@
             <li>My Account</li>
             <li>Support</li>
         </ul>
-        </div></transition>
-    </div>
+        </div>
+    </div></transition>
 </template>
 
 <script>
@@ -23,6 +30,8 @@ props:['listMenu']
 </script>
 
 <style scoped>
+
+
 .slide-enter 
 {
 
