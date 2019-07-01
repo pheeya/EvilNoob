@@ -56,15 +56,16 @@ data:function ()
     margin:0;
     list-style-type: none;
    border-bottom:.1px solid silver;
- background-color:rgba(49, 49, 49, 0.836);
+ background-color:rgba(0, 0, 0, 0.288);
      color: rgba(255, 255, 255, 0.7);
      
  
-z-index:9999;
+z-index:999;
 position:relative;
    
   
 }
+
 
 .main #mainNav li
 {

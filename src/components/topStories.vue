@@ -57,6 +57,7 @@ height:600px;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             color:white;
+              border-bottom:1px solid rgba(45, 117, 226, 0.726);
 }
 .main h1
 {
