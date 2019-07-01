@@ -34,7 +34,7 @@ components:
 data:function ()
 {
     return {
-        menu:true,
+        menu:false,
         currentNumber:0,
         timer:null,
         
