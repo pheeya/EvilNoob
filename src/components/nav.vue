@@ -5,8 +5,7 @@
       <div class="blackNav">Evil Noobs</div> 
  <div><img id="smolMenu" v-on:click= "showList=!showList" 
  src="https://c.s-microsoft.com/en-us/CMSImages/icon_menu_new.png?version=2e17c0b9-dc99-1d59-c64d-0be30696e854"> 
- <hr id="smolHR" style="margin-top:50px;position:absolute;z-index:99; width:99%">
- </div>
+  </div>
   <ul id="mainNav">
   
    
@@ -30,6 +29,7 @@
 </template>
 
 <script>
+
 import drop from "./subComponents/dropDown1"
 import drop2 from "./subComponents/dropDown2"
 import list from "./subComponents/listMenu"
@@ -84,6 +84,7 @@ methods:
 z-index:99;
   margin:0 auto;
 border-bottom:1px solid rgba(255, 255, 255, 0.219);
+
 }
 .blackNav 
 {
@@ -138,14 +139,15 @@ position:relative;
 
 max-width:1600px;
 margin:auto;
-  
+
+  padding-bottom:13px;
 }
 
 
 .main #mainNav li
 {
-    padding:0;
-    margin:15px 15px;
+    padding:3px 0px;
+    margin:0px 13.5px;
     list-style-type: none;
   font-family: 'Open Sans', sans-serif;
    display:inline-block;
