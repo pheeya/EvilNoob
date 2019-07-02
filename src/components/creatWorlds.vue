@@ -94,6 +94,7 @@ button:hover
 {
     color:rgb(221, 216, 216);
     font-size:23px;
+  
 }
 .worlds h1
 {
@@ -153,5 +154,9 @@ margin-right:0;
    -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
      box-sizing: border-box; 
+     margin-bottom:30px;
+     padding-bottom:0;
 }
+
+
 </style>

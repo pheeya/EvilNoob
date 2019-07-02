@@ -1,14 +1,21 @@
 <template>
+<div class="main">
+     <div><img id="three" v-on:click="showList=true"
+     src="https://c.s-microsoft.com/en-us/CMSImages/icon_menu_new.png?version=2e17c0b9-dc99-1d59-c64d-0be30696e854"> 
+  </div>
+     <div v-if="showList" class="overlay"></div>
     <transition name="slide">
-    <div v-if="listMenu" class="main">
+    <div v-if="showList" class="main">
         
-         
+    
            
           
           
             <div  class="back">
             
         <ul>
+            <li id="imgSRC"><img src="https://js.pngtree.com/v2/images/pngtree_logo.png" alt=""> </li>
+  <img v-on:click="showList=false" id="x" src="https://docs.updatefactory.io/images/close-x.png" alt="">
             <li>GAMES</li>
             <li>SHOP</li>
             <li>NEWS</li>
@@ -21,16 +28,46 @@
         </ul>
         </div>
     </div></transition>
+    </div>
 </template>
 
 <script>
 export default {
-props:['listMenu']
+    data: function ()
+    {
+       return{ showList:false}
+    },
+
+
+
 }
 </script>
 
 <style scoped>
 
+.overlay 
+{
+    width:100vw;
+    height:100vh;
+    background:rgba(19, 14, 14, 0.575);
+    position: fixed;
+}
+#three
+{
+position:absolute;
+width:35px;
+top:15px;
+left:10px;
+cursor:pointer;
+}
+#x 
+{
+    position: absolute;
+    width:20px;
+    top:15px;
+    left:10px;
+    cursor: pointer;
+}
 
 .slide-enter 
 {
@@ -70,48 +107,71 @@ props:['listMenu']
     }
 }
 
+#imgSRC 
+{
+ height:50px;   
+
+}
+
+#imgSRC img 
+{
+    position: absolute;
+    width:200px;
+    top:0;
+    left:60px;
+
+}
 .main 
 {
+   
     position:absolute;
-    z-index:100;
+    z-index:101;
       font-family: 'Montserrat', sans-serif;
       display:none;
+      top:0;
+      padding:0;
+      margin:0;
+     font-size:16px;
+      
+      width:330px;
+      font-weight:500;
 }
 
 .back 
 {
-      background-color: #1a1d20f5;
-      margin-top:-10px;
-      width:50vw;
+      background-color: #121a22;
+      width:350px;
+   position:fixed;
       height:100vh;
 }
 .back ul 
 {
     list-style-type:none;
     color:white;
-    margin:60px 10px;
+
    text-align:left;
    padding:0;
-   padding-top:10px;
+   margin:0;
    display:flex;
    flex-direction:column;
+ 
 }
 .back ul li 
 {
 
-  
-    border-top:.1px solid rgba(255, 255, 255, 0.479);
-    border-bottom:.1px solid rgba(255, 255, 255, 0.267);
+  border-top:.5px solid rgba(179, 177, 177, 0.74);
+
+   
 margin-left:0;
 cursor: pointer;
-width:200px;
-padding:20px;
-transition: all .3s;
 
+padding:15px;
+transition: all .2s;
+ color:rgba(201, 201, 201, 0.87);
 }
 ul li:hover 
 {
-    background-color:rgba(94, 94, 94, 0.801);
+   color:white;
 }
 
 @media (max-width:870px)

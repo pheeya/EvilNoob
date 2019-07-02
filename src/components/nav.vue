@@ -3,15 +3,14 @@
      
 
       <div class="blackNav">Evil Noobs</div> 
- <div><img id="smolMenu" v-on:click= "showList=!showList" 
- src="https://c.s-microsoft.com/en-us/CMSImages/icon_menu_new.png?version=2e17c0b9-dc99-1d59-c64d-0be30696e854"> 
-  </div>
+
   <ul id="mainNav">
   
+            
    
-   
-      <li>LOGO</li>
-      
+      <li id="imgSRC"><img src="https://js.pngtree.com/v2/images/pngtree_logo.png"></li>
+      <li></li>
+      <li></li> 
       <li v-on:click= "gamesMenu">GAMES▼</li>
       <li>SHOP</li>
       <li>NEWS</li>
@@ -22,7 +21,7 @@
 
   <cmp-drop v-bind:showMenu= "menu"></cmp-drop>
   <cmp-drop2 v-bind:showMenu2="menu2"></cmp-drop2>
-<cmp-List :listMenu="showList"></cmp-List>
+<cmp-List></cmp-List>
 
 </div>
     
@@ -44,8 +43,8 @@ components:
 data:function ()
 {
     return {
-      showList:false,
-       listMenu:false,
+     
+       
       menu2:false,
         menu:false,
         currentNumber:0,
@@ -76,6 +75,25 @@ methods:
 
 <style scoped>
 
+
+#imgSRC 
+{
+ 
+   margin:0;
+  padding:0;
+  
+
+}
+#imgSRC img 
+{
+  width:150px;
+top:6px;
+left:0px;
+  margin:0;
+  padding:0;
+  position: absolute;
+}
+
 .main 
 
 {
@@ -90,7 +108,7 @@ border-bottom:1px solid rgba(255, 255, 255, 0.219);
 {
     width:100%;
     position:absolute;
- height:42.4px;
+ height:40.4px;
     background-color:black;
     display:none;
     color:white;
@@ -102,23 +120,7 @@ border-bottom:1px solid rgba(255, 255, 255, 0.219);
 }
 
 
-#smolHR 
-{
-  display:none;
-}
-#smolMenu 
-{
-  position:absolute;
-  top:15px;
-  
-  margin:0;
-  padding:0;
-z-index:101;
-width:50px;
- display:none;
- 
-cursor:pointer;
-}
+
 
 
 
@@ -147,7 +149,7 @@ margin:auto;
 .main #mainNav li
 {
     padding:3px 0px;
-    margin:0px 13.5px;
+    margin:0px 13px;
     list-style-type: none;
   font-family: 'Open Sans', sans-serif;
    display:inline-block;
