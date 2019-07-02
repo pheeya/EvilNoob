@@ -75,6 +75,16 @@ methods:
 </script>
 
 <style scoped>
+
+.main 
+
+{
+  position: absolute;
+  width:100%;
+z-index:99;
+  margin:0 auto;
+border-bottom:1px solid rgba(255, 255, 255, 0.219);
+}
 .blackNav 
 {
     width:100%;
@@ -124,8 +134,10 @@ color:rgba(231, 231, 231, 0.815);
     white-space: nowrap;
 z-index:999;
 position:relative;
-      border-bottom:1px solid rgba(255, 255, 255, 0.219);
+      
 
+max-width:1600px;
+margin:auto;
   
 }
 

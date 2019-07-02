@@ -1,8 +1,12 @@
 <template>
-    <div class="main">
+    
    
- <div  class="parrallax">
-       <transition-group v-bind:name= "animName">   
+<div class="main">
+
+    <div class="content">
+       <transition-group v-bind:name= "animName">
+
+           
  <div v-for= "number in [currentNumber]" v-bind:key="number" class="slider">
 
 <img id="slidesIMG" v-bind:src="image[currentNumber]">
@@ -13,9 +17,10 @@
 <img  v-on:click= "nextImg"   id="arrowR" src="https://image.flaticon.com/icons/svg/271/271228.svg">
 <img  v-on:click= "previous" id="arrowL" src="https://image.flaticon.com/icons/svg/271/271220.svg">
 </div>
+</div>
 
 
-    </div>
+    
 </template>
 
 <script>
@@ -28,7 +33,7 @@ data:function ()
         timer:null,
         animName:"slideForwards",
         
-        image:["https://bnetcmsus-a.akamaihd.net/cms/gallery/KO27VQL5M8EL1560816589144.jpg", "https://bnetcmsus-a.akamaihd.net/cms/gallery/RNICIQUDGMF51561595505381.jpg", "https://bnetcmsus-a.akamaihd.net/cms/gallery/RNICIQUDGMF51561595505381.jpg"]}
+        image:["https://bnetcmsus-a.akamaihd.net/cms/gallery/KO27VQL5M8EL1560816589144.jpg", "https://bnetcmsus-a.akamaihd.net/cms/gallery/3AIPM0OPFGOY1562008099385.jpg", "https://bnetcmsus-a.akamaihd.net/cms/gallery/RNICIQUDGMF51561595505381.jpg"]}
 },
 
 mounted: function ()
@@ -92,11 +97,41 @@ previous: function ()
 
 <style scoped>
 
+
+.main 
+{
+ height:600px;
+
+overflow: hidden;
+    margin:0;
+    padding:0;
+    position:relative;
+   background:rgb(20, 29, 54);
+   z-index:-9999;
+  
+}
+
+.content 
+{
+    width:2500px;
+    margin:auto;
+  
+
+}
+
+@media (max-width:2500px)
+{
+    .content 
+    {
+        width:100%;
+    }
+}
+
+
 .slider 
 {
-width:100%;
-width:100%;
-background:red;
+
+
 
 }
 
@@ -247,7 +282,7 @@ position:relative;
    margin-bottom:0;
    height:80px;
      transition:all .3s;
-     z-index:0;
+     z-index:1;
 }
 
 #arrowR 
@@ -266,7 +301,7 @@ position:relative;
    margin-bottom:0;
    height:80px;
   transition:all .3s;
-  z-index:0;
+  z-index:1;
 }
 
 
@@ -281,24 +316,22 @@ position:relative;
    opacity:1;
   background-color: rgb(26, 137, 241);
 }
-.parrallax
-{
-  
-    
- top:-60px;
-position:relative;
 
-    height:600px;
-    overflow:hidden;
-}
-.main 
+@media (max-height:920px)
 {
- height:540px;
-    
-  
-    margin:0;
-    padding:0;
-    position:relative;
+    .main 
+    {
+   height:600px;
+    }
+
+}
+
+@media (min-height:921px)
+{
+.main {
+    height:66%;
+    max-height:700px;
+}
 }
 
 </style>

@@ -108,8 +108,11 @@ button:hover
    -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
      box-sizing: border-box; 
-  
-  
+  position:relative;
+  max-width:1600px;
+
+  margin:auto;
+     border-bottom:2px solid rgb(8, 156, 255);
 }
 .main 
 {
@@ -118,23 +121,37 @@ button:hover
    -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
      box-sizing: border-box; 
+ 
 
 
-  
-    background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
 
     background-size:cover;
     position: absolute;
     z-index:-99;
-    width:100%;
-   height:431px;
     
+   height:431px;
+       
+      text-align:center;
+ 
+
+
+ width:100%;
+     
+    background-repeat: no-repeat;
+     margin:auto;
+margin-right:0;
 }
 
 .content 
 {
+   width:100%;
+   margin:auto;
     padding:130px 50px;
-     border-bottom:2px solid rgb(8, 156, 255);
+ 
+  margin-right:0;
+   -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
 }
 </style>

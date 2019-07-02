@@ -72,6 +72,9 @@ height:600px;
 {
     padding:10px 50px;
     overflow:hidden;
+ 
+    width:1300px;
+    margin:auto;
 }
 
 .card 
@@ -144,4 +147,13 @@ p
         cursor: pointer;
 }
 
+@media (max-width:1400px)
+{
+    .content 
+    {
+        width:unset;
+        overflow: hidden;
+        padding-left:5px;
+    }
+}
 </style>

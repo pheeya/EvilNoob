@@ -175,16 +175,19 @@ font-weight: bold;
     margin:0;
     padding:0;
  margin-left:40px;
- position: relative;
+ position:relative;
+
 
  margin-bottom:50px;
  overflow: hidden;
+
 }
 .content 
 {
-    
+
     font-weight: 400;
-    
+    width:1400px;
+    margin:auto;
 }
 .gameIcons ul li 
 {
@@ -269,5 +272,13 @@ width:167px;
     position:absolute;
    top:-2px;
    left:1px;
+}
+
+@media (max-width:1400px)
+{
+    .content 
+    {
+        width:100%;
+    }
 }
 </style>

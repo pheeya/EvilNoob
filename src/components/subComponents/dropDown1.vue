@@ -11,7 +11,7 @@
  
 
 </ul>
-<hr>
+
 <div class="footer">
 <ul>
     <li>More Games</li>
@@ -21,7 +21,7 @@
 
 </div>
 
-<hr>
+
 </div>
 
 
@@ -86,10 +86,7 @@ h4
     to {transform: translateX(-100%)}
 }
 
-hr 
-{
-    border:.4px solid rgba(128, 128, 128, 0.836);
-}
+
 .main 
 {
       font-family: 'Montserrat', sans-serif;
@@ -103,6 +100,7 @@ width:100%;
     padding:0;
     margin:0;
     width:100%;
+    text-align:center;
 }
 .menu 
 {
@@ -131,13 +129,15 @@ ul li
 {
     text-align:center;
   margin:0;
-  padding:0;
+  padding:10px 0;
+     border-top:1px solid rgba(114, 114, 114, 0.795);
 }
 .footer ul li 
 {
     padding:0;
     margin:5px 20px;
     cursor:pointer;
+ 
 }
 
 

@@ -59,7 +59,7 @@ export default {
     -webkit-box-sizing: border-box; 
      box-sizing: border-box; 
      text-align:center;
-     
+    
     margin-top:200px;
 }
 .content ul 
@@ -89,8 +89,9 @@ font-size:15px;
      box-sizing: border-box; 
 
   font-family: 'Montserrat', sans-serif;
-  height:500px;
-  
+
+
+
 }
 
 .footerBack 
@@ -101,7 +102,9 @@ font-size:15px;
     margin-top: -1px;
     background-repeat:no-repeat;
     background-size:cover;
-   
+
 }
+
+
 
 </style>
