@@ -102,18 +102,19 @@ previous: function ()
 {
  height:600px;
 
-overflow: hidden;
+  overflow:hidden;
     margin:0;
     padding:0;
     position:relative;
    background:rgb(20, 29, 54);
    z-index:-9999;
-  
+  max-width:2500px;
+  margin:auto;
 }
 
 .content 
 {
-    width:2500px;
+  
     margin:auto;
   
 
@@ -145,19 +146,30 @@ overflow: hidden;
     top:0px;
     z-index:-999;
     overflow: hidden;
-   overflow:-moz-hidden-unscrollable;
- 
- 
+   left:-500px;
+   overflow:hidden;
+    
+}
+
+@media (min-width:1920px)
+{
+    #slidesIMG 
+    {
+        left:0;
+    }
 }
 .slideForwards-enter 
 {
  overflow: hidden;
+ opacity:0;
 }
 
 .slideForwards-enter-active  {
 
  
 animation:slide-in 1s;
+transition:opacity 1s;
+
 position:relative;
 
 
@@ -182,7 +194,7 @@ position:relative;
 {
     from{
 
-        transform:translateX(100%);
+        transform:translateX(500px);
    
     }
     to 
@@ -201,7 +213,7 @@ position:relative;
     }
     to 
     {
-        transform:translateX(-100%);
+        transform:translateX(-500px);
      
     }
 }
@@ -210,14 +222,17 @@ position:relative;
 
 .slideBackwards-enter 
 {
-
+opacity: 0;
 
 }
 
 .slideBackwards-enter-active  {
 
+
  
 animation:slide-out-in 1s;
+transition: opacity 1s;
+
 position:relative;
 
 
@@ -242,7 +257,7 @@ position:relative;
 {
     from{
 
-        transform:translateX(-180%);
+        transform:translateX(-500px);
       
     }
     to 
@@ -261,7 +276,7 @@ position:relative;
     }
     to 
     {
-        transform:translateX(100%);
+        transform:translateX(500px);
        
     }
 }

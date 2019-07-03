@@ -139,7 +139,7 @@ z-index:999;
 position:relative;
       
 
-max-width:1600px;
+max-width:1520px;
 margin:auto;
 
   padding-bottom:13px;
