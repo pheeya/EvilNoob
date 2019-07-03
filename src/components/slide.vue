@@ -159,7 +159,7 @@ cursor: pointer;
    height:80px;
      transition:all .3s;
      z-index:1;
-     display:none;
+     opacity:0;
 }
 
 #arrowR 
@@ -179,19 +179,19 @@ cursor: pointer;
    height:80px;
   transition:all .3s;
   z-index:1;
-    display:none;
+    opacity:0;
 }
 
 .main:hover  #arrowL
 {
     display:block;
-  
+  opacity:1;
 }
 
 .main:hover  #arrowR
 {
     display:block;
-  
+    opacity:1;
 }
 
 
