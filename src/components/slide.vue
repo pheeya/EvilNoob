@@ -12,7 +12,19 @@
 <img id="slidesIMG" v-bind:src="image[currentNumber]">
 
   </div>
+
 </transition-group>
+
+<!-- TEXT SLIDER -->
+<transition-group name="textSlide">
+<div v-for= "number in [currentNumber]"  v-bind:key="number" class="textSlider">
+<img id="slideText" v-bind:src="text[currentNumber]">
+<h1>{{info1[currentNumber]}} <br> {{info2[currentNumber]}}</h1>
+<button>{{buttonText[currentNumber]}}</button>
+</div>
+</transition-group>
+
+
 
 <img  v-on:click= "nextImg"   id="arrowR" src="https://image.flaticon.com/icons/svg/271/271228.svg">
 <img  v-on:click= "previous" id="arrowL" src="https://image.flaticon.com/icons/svg/271/271220.svg">
@@ -28,12 +40,15 @@ export default {
 data:function ()
 {
     return {
-        
+        info1:['PREPARE', 'placeHold','placeHold','placeHold','placeHold'],
+        info2:["TO GO DARK", 'placeHold','placeHold','placeHold','placeHold'],
+        buttonText:["WATCH TRAILER", 'placeHold','placeHold','placeHold','placeHold'],
+        text:['https://bnetcmsus-a.akamaihd.net/cms/gallery/BVNCIG8Q1AG91559235500667.png',"https://bnetcmsus-a.akamaihd.net/cms/gallery/2y/2Y086ONS2W8I1548874449028.png",'https://bnetcmsus-a.akamaihd.net/cms/gallery/IM557Q10Z43T1541100890908.png',"https://bnetcmsus-a.akamaihd.net/cms/gallery/1JIM3UV73ZJ21562007919980.png","https://bnetcmsus-a.akamaihd.net/cms/gallery/7SXTFNIW5YP11561596097087.png"],
         currentNumber:0,
         timer:null,
         animName:"slideForwards",
         
-        image:["https://bnetcmsus-a.akamaihd.net/cms/gallery/KO27VQL5M8EL1560816589144.jpg", "https://bnetcmsus-a.akamaihd.net/cms/gallery/3AIPM0OPFGOY1562008099385.jpg", "https://bnetcmsus-a.akamaihd.net/cms/gallery/RNICIQUDGMF51561595505381.jpg"]}
+        image:[ "https://bnetcmsus-a.akamaihd.net/cms/gallery/GXD4JNW026CS1559235465911.jpg" ,"https://bnetcmsus-a.akamaihd.net/cms/gallery/CKZ5QSH3FUKX1548873953399.jpg"  ,"https://bnetcmsus-a.akamaihd.net/cms/gallery/6BVTRM03YOXE1541100891084.jpg","https://bnetcmsus-a.akamaihd.net/cms/gallery/3AIPM0OPFGOY1562008099385.jpg", "https://bnetcmsus-a.akamaihd.net/cms/gallery/RNICIQUDGMF51561595505381.jpg"]}
 },
 
 mounted: function ()
@@ -97,6 +112,116 @@ previous: function ()
 
 <style scoped>
 
+.textSlider
+{
+    
+ 
+background-size:500px;
+height:100%;
+width:100%;
+cursor: pointer;
+    position:absolute;
+   top:60px;
+ padding:70px 120px;
+ font-family: 'Montserrat', sans-serif;
+ font-size:35px;
+ color:white;
+}
+
+.textSlider h1 
+{
+    margin:0;
+}
+
+#slideText 
+{
+   
+    width:260px;
+   top:50px;
+    left:122px;
+    cursor: pointer;
+}
+
+#arrowL
+{
+    width:20px;
+    float:left;
+    cursor: pointer;
+        background-color: rgba(28, 106, 207, 0.767);
+    padding:10px;
+    border:.1px solid silver;
+    margin:200px 10px;
+    opacity:.8;
+    position:relative;
+     margin-left:20px;
+   margin-top:250px;
+   margin-bottom:0;
+   height:80px;
+     transition:all .3s;
+     z-index:1;
+     display:none;
+}
+
+#arrowR 
+{
+      width:20px;
+    float:right;
+    cursor: pointer;
+         background-color: rgba(28, 106, 207, 0.767);
+    padding:10px;
+    border:.1px solid silver;
+    margin:200px 10px;
+    opacity:.8;
+    position:relative;
+     margin-left:20px;
+   margin-top:250px;
+   margin-bottom:0;
+   height:80px;
+  transition:all .3s;
+  z-index:1;
+    display:none;
+}
+
+.main:hover  #arrowL
+{
+    display:block;
+  
+}
+
+.main:hover  #arrowR
+{
+    display:block;
+  
+}
+
+
+#arrowR:hover 
+{
+  opacity:1;
+  background-color: rgb(26, 137, 241);
+}
+
+#arrowL:hover 
+{
+   opacity:1;
+  background-color: rgb(26, 137, 241);
+}
+
+.textSlide-enter
+{
+    opacity:0;
+}
+
+.textSlide-enter-active
+{
+    animation:slide-in .5s;
+    transition:opacity .5s;
+    animation-delay: .5s;
+    transition-delay: .5s;
+
+}
+
+
 
 .main 
 {
@@ -149,6 +274,26 @@ previous: function ()
    left:-500px;
    overflow:hidden;
     
+}
+
+button {
+    display: inline-block;
+    position: relative;
+    background-color: #0e86ca;
+    border: solid 1px #00aeff;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px 50px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: color .2s,background-color .2s,border-color .2s;
+}
+button:hover 
+{
+    background-color:#066ba5
 }
 
 @media (min-width:1920px)
@@ -281,56 +426,7 @@ position:relative;
     }
 }
 
-#arrowL
-{
-    width:20px;
-    float:left;
-    cursor: pointer;
-        background-color: rgba(28, 106, 207, 0.767);
-    padding:10px;
-    border:.1px solid silver;
-    margin:200px 10px;
-    opacity:.8;
-    position:relative;
-     margin-left:20px;
-   margin-top:250px;
-   margin-bottom:0;
-   height:80px;
-     transition:all .3s;
-     z-index:1;
-}
 
-#arrowR 
-{
-      width:20px;
-    float:right;
-    cursor: pointer;
-         background-color: rgba(28, 106, 207, 0.767);
-    padding:10px;
-    border:.1px solid silver;
-    margin:200px 10px;
-    opacity:.8;
-    position:relative;
-     margin-left:20px;
-   margin-top:250px;
-   margin-bottom:0;
-   height:80px;
-  transition:all .3s;
-  z-index:1;
-}
-
-
-#arrowR:hover 
-{
-  opacity:1;
-  background-color: rgb(26, 137, 241);
-}
-
-#arrowL:hover 
-{
-   opacity:1;
-  background-color: rgb(26, 137, 241);
-}
 
 @media (max-height:920px)
 {
