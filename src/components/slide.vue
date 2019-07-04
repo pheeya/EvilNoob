@@ -64,12 +64,19 @@ data:function ()
 mounted: function ()
 {
     this.startRotation();
- 
+
 },
 
+
+
+    
+
+
 methods:{
+    
 startRotation: function ()
 {
+    
  this.timer= setInterval(this.next, 5000)
 },
 

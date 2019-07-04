@@ -14,7 +14,7 @@
             <div  class="back">
             
         <ul>
-            <li id="imgSRC"><img src="https://js.pngtree.com/v2/images/pngtree_logo.png" alt=""> </li>
+            <li id="imgSRC"><img src="https://cdn.discordapp.com/attachments/584665267078955009/596189239620796436/logo.png" alt=""> </li>
   <img v-on:click="showList=false" id="x" src="https://docs.updatefactory.io/images/close-x.png" alt="">
             <li>GAMES</li>
             <li>SHOP</li>
@@ -116,15 +116,15 @@ cursor:pointer;
 #imgSRC img 
 {
     position: absolute;
-    width:200px;
-    top:0;
-    left:60px;
+    width:150px;
+    top:20px;
+    left:90px;
 
 }
 .main 
 {
    
-    position:absolute;
+    position:fixed;
     z-index:101;
       font-family: 'Montserrat', sans-serif;
       display:none;
@@ -135,14 +135,16 @@ cursor:pointer;
       
       width:330px;
       font-weight:500;
+      height:120vh;
 }
 
 .back 
 {
+    height:120vh;
       background-color: #121a22;
       width:350px;
-   position:fixed;
-      height:120vh;
+   position:absolute;
+      height:100%;
 }
 .back ul 
 {
