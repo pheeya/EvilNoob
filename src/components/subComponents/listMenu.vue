@@ -47,8 +47,8 @@ export default {
 
 .overlay 
 {
-    width:100vw;
-    height:100vh;
+    width:120vw;
+    height:120vh;
     background:rgba(19, 14, 14, 0.575);
     position: fixed;
 }
@@ -142,7 +142,7 @@ cursor:pointer;
       background-color: #121a22;
       width:350px;
    position:fixed;
-      height:100vh;
+      height:120vh;
 }
 .back ul 
 {
