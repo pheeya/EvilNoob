@@ -2,7 +2,7 @@
     <div class="main">
 <div class="footerBack">
 <div class="content">
-   <h1>EvilNoobs</h1>
+   <img src="https://cdn.discordapp.com/attachments/584665267078955009/596189239620796436/logo.png" alt="">
    <br>
   <ul>
       <li>CAREERS</li>
@@ -42,9 +42,18 @@ export default {
 
 <style scoped>
 
+.content img 
+{
+    width:150px;
+    position:relative;
+    top:-80px;
+}
+
+
 #privacy li 
 {
-    font-size:12px
+    font-size:12px;
+    margin-bottom:50px
 }
 .content h1 
 {

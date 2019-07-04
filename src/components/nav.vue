@@ -8,7 +8,7 @@
   
             
    
-      <li id="imgSRC"><img src="https://js.pngtree.com/v2/images/pngtree_logo.png"></li>
+      <li id="imgSRC"><img src="https://media.discordapp.net/attachments/584665267078955009/596189236286193665/mascot.png"></li>
       <li></li>
       <li></li> 
       <li v-on:click= "gamesMenu">GAMES▼</li>
@@ -86,9 +86,9 @@ methods:
 }
 #imgSRC img 
 {
-  width:150px;
-top:6px;
-left:0px;
+  width:65px;
+top:3px;
+left:px;
   margin:0;
   padding:0;
   position: absolute;

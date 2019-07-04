@@ -42,6 +42,7 @@ components:
 height:100vh;
 position:absolute;
 z-index:-1;
+min-width:330px;
 }
 
 </style>

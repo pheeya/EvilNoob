@@ -4,7 +4,7 @@
             <img v-on:click= "moveLeft" id="arrowR" src="https://image.flaticon.com/icons/svg/271/271228.svg">
 <img v-if= "movement!=0" v-on:click= "moveRight" id="arrowL" src="https://image.flaticon.com/icons/svg/271/271220.svg">
 <img  v-if="movement==0" id="replacer">
-<h1>Games </h1> <p>  view all games ></p> <h2>Blizzard</h2>
+<h1>Games </h1> <p>  view all games ></p> <h2>Evil Noob</h2>
 
 <div class="gameIcons">
 
@@ -87,7 +87,7 @@ button:hover
  
     position: relative;
     z-index:9999;
-top:-204px;
+top:-210px;
 
 padding:10px;
 text-align:center;
@@ -157,7 +157,7 @@ h2
      color:white;
      position:relative;
      top:0;
-background-image:url("https://d9me64que7cqs.cloudfront.net/images/common/background-generic-landscape-short-c67b55f50ca032607997398840751185782dd86436566617ed80dd553f62a890f554ca38ef1de26c6d60b4976ebea6145b9916091073d06823aa9853a093f3e7.jpg");
+background-image:url("https://cdn.discordapp.com/attachments/584665267078955009/596198222066745354/bg_1.png");
 background-size:cover;
 background-position:center;
 
@@ -195,7 +195,7 @@ font-weight: bold;
 margin-right:15px;
        height:200px;
     width:167px;
-    border:1px solid silver;
+    border:1px solid rgba(104, 104, 104, 0.801);
   position:relative;
     transition: all .3s ease-in-out;
 

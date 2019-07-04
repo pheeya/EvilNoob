@@ -29,6 +29,15 @@
 <img  v-on:click= "nextImg"   id="arrowR" src="https://image.flaticon.com/icons/svg/271/271228.svg">
 <img  v-on:click= "previous" id="arrowL" src="https://image.flaticon.com/icons/svg/271/271220.svg">
 </div>
+
+<div class="bars"><ul>
+    <li> <div v-bind:style= "styler[0]" class="inner"></div> </li>
+    <li> <div v-bind:style= "styler[1]" class="inner"></div> </li>
+    <li> <div v-bind:style= "styler[2]" class="inner"></div> </li>
+    <li> <div v-bind:style= "styler[3]" class="inner"></div> </li>
+    <li> <div v-bind:style= "styler[4]" class="inner"></div> </li>
+</ul></div>
+
 </div>
 
 
@@ -40,6 +49,7 @@ export default {
 data:function ()
 {
     return {
+        styler:['width:100px','color:white','color:white','color:white','color:white',],
         info1:['PREPARE', 'placeHold','placeHold','placeHold','placeHold'],
         info2:["TO GO DARK", 'placeHold','placeHold','placeHold','placeHold'],
         buttonText:["WATCH TRAILER", 'placeHold','placeHold','placeHold','placeHold'],
@@ -54,6 +64,7 @@ data:function ()
 mounted: function ()
 {
     this.startRotation();
+ 
 },
 
 methods:{
@@ -61,8 +72,12 @@ startRotation: function ()
 {
  this.timer= setInterval(this.next, 5000)
 },
+
+
+
 next: function ()
 { 
+    
 
   this.animName="slideForwards"
    if (this.currentNumber==this.image.length-1)
@@ -71,6 +86,12 @@ next: function ()
    }
    else
 {this.currentNumber=this.currentNumber+1;}
+this.styler[this.currentNumber]='width:100px;transition:all 5s;'
+this.styler[this.currentNumber-1]='width:0;transition:all 0s;'
+if (this.currentNumber==0)
+{
+    this.styler[4]="width:0px;transition:all 0s;"
+}
 },
 nextImg: function ()
 { 
@@ -84,11 +105,18 @@ nextImg: function ()
    }
    else
 {this.currentNumber=this.currentNumber+1;}
+this.styler[this.currentNumber]="width:100px;transition:all 0s;"
+this.styler[this.currentNumber-1]='width:0px;transition:all 0s;'
+if (this.currentNumber==0)
+{
+    this.styler[4]="width:0px;transition:all 0s;"
+}
 },
 
 
 previous: function () 
 {
+    
     this.animName="slideBackwards"
       clearTimeout(this.timer);
  this.timer = null;
@@ -100,7 +128,12 @@ previous: function ()
     {
         this.currentNumber=this.currentNumber -1 ;
     }
-    
+    this.styler[this.currentNumber]="width:100px;transition:all 0s;";
+    this.styler[this.currentNumber+1]='width:0px;transition:all 0s;';
+if (this.currentNumber==4)
+{
+    this.styler[0]="width:0px;transition:all 0s;"
+}
 },
 
 
@@ -111,6 +144,69 @@ previous: function ()
 </script>
 
 <style scoped>
+
+.inner 
+{
+    background:rgb(9, 124, 231);
+  width:0;
+    height:6px;
+position:absolute;
+z-index:99999999999999999;
+cursor: pointer;
+transition:all 5s;
+
+max-width:100px;
+}
+.bars ul 
+{
+   
+    position:relative;
+top:580px;
+    list-style-type:none;
+    display:flex;
+  
+padding:0;
+  
+ 
+  max-width:700px;
+
+  margin:auto;
+}
+
+.bars li 
+{
+  
+     width:100px;
+    height:6px;
+    background-color:rgba(248, 238, 238, 0.493);
+    margin:auto;
+
+ 
+}
+@media (max-width:750px)
+{
+    .main {
+    
+    }
+   .main .bars ul 
+    {
+     top:400px;
+     padding:0;
+display:block;
+ 
+    }
+    .main .bars ul li 
+    {
+        width:100px;
+        padding:0;
+           transform:scale(1);
+           min-width:70px;
+       margin-bottom:3px;
+           
+    }
+
+}
+
 
 .textSlider
 {
@@ -147,7 +243,7 @@ cursor: pointer;
     width:20px;
     float:left;
     cursor: pointer;
-        background-color: rgba(28, 106, 207, 0.767);
+        background-color: rgba(11, 128, 238, 0.87);
     padding:10px;
     border:.1px solid silver;
     margin:200px 10px;
@@ -180,6 +276,15 @@ cursor: pointer;
   transition:all .3s;
   z-index:1;
     opacity:0;
+}
+
+@media (max-width:750px)
+{
+ 
+    #arrowR,#arrowL 
+    {
+        opacity:1;
+    }
 }
 
 .main:hover  #arrowL
@@ -254,12 +359,7 @@ cursor: pointer;
 }
 
 
-.slider 
-{
 
-
-
-}
 
 #slidesIMG 
 {
@@ -428,6 +528,20 @@ position:relative;
 
 
 
+@media (min-height:920px) 
+{
+        .bars ul 
+{
+ top:63vh;
+}
+}
+@media (min-height:1090px)
+{
+    .bars ul 
+    {
+        top:680px;
+    }
+}
 @media (max-height:920px)
 {
     .main 
@@ -444,5 +558,39 @@ position:relative;
     max-height:700px;
 }
 }
+@media (max-width:750px)
+{
+      .main
+    {
+ height:450px;
+    }
+    #slidesIMG 
+    {
+    width:1550px;
+    }
 
+    #slideText
+    {
+   width:200px;
+   
+    }
+
+    .textSlider 
+    {
+        font-size:15px;
+        text-align:center;
+        width:50vw;
+        padding-top:20px;
+    }
+}
+
+@media (max-width: 375px)
+{
+    .textSlider
+    {
+        padding:50px 80px;
+    }
+    
+ 
+}
 </style>

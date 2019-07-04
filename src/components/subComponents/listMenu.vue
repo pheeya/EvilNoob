@@ -1,7 +1,7 @@
 <template>
 <div class="main">
      <div><img id="three" v-on:click="showList=true"
-     src="https://c.s-microsoft.com/en-us/CMSImages/icon_menu_new.png?version=2e17c0b9-dc99-1d59-c64d-0be30696e854"> 
+     src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color/254000/30-512.png"> 
   </div>
      <div v-if="showList" class="overlay"></div>
     <transition name="slide">
@@ -56,7 +56,7 @@ export default {
 {
 position:absolute;
 width:35px;
-top:15px;
+top:10px;
 left:10px;
 cursor:pointer;
 }
