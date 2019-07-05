@@ -197,7 +197,7 @@ padding:0;
 @media (max-width:750px)
 {
     .main {
-    
+   
     }
    .main .bars ul 
     {
@@ -573,6 +573,7 @@ position:relative;
 {
       .main
     {
+  
  height:450px;
     }
     #slidesIMG 
@@ -583,6 +584,7 @@ position:relative;
     #slideText
     {
    width:200px;
+  
    
     }
 
@@ -590,18 +592,12 @@ position:relative;
     {
         font-size:15px;
         text-align:center;
-        width:50vw;
+       
+       padding:0;
+       margin:0;
         padding-top:20px;
     }
 }
 
-@media (max-width: 375px)
-{
-    .textSlider
-    {
-        padding:50px 80px;
-    }
-    
- 
-}
+
 </style>
