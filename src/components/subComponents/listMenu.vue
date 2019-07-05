@@ -1,6 +1,6 @@
 <template>
-<div class="main">
-     <div><img id="three" v-on:click="showList=true"
+<div class="main" v-bind:style= "mainStyle">
+     <div><img id="three" v-on:click="show"
      src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color/254000/30-512.png"> 
   </div>
      <div v-if="showList" class="overlay"></div>
@@ -15,7 +15,7 @@
             
         <ul>
             <li id="imgSRC"><img src="https://cdn.discordapp.com/attachments/584665267078955009/596189239620796436/logo.png" alt=""> </li>
-  <img v-on:click="showList=false" id="x" src="https://docs.updatefactory.io/images/close-x.png" alt="">
+  <img v-on:click="hide" id="x" src="https://docs.updatefactory.io/images/close-x.png" alt="">
             <li>GAMES</li>
             <li>SHOP</li>
             <li>NEWS</li>
@@ -35,10 +35,23 @@
 export default {
     data: function ()
     {
-       return{ showList:false}
+       return{ showList:false,
+        mainStyle:'height:0;'
+        }
     },
 
-
+methods:{
+    show: function ()
+    {
+        this.showList=true;
+       this.mainStyle="height:120vh;"
+    },
+    hide:function ()
+    {
+        this.showList=false;
+        this.mainStyle="height:0;"
+    }
+}
 
 }
 </script>
@@ -127,15 +140,15 @@ cursor:pointer;
     position:fixed;
     z-index:101;
       font-family: 'Montserrat', sans-serif;
-      display:none;
+    height:120vh;
       top:0;
       padding:0;
       margin:0;
      font-size:16px;
-      
+      z-index:99;
       width:330px;
       font-weight:500;
-      height:120vh;
+    display:none;
 }
 
 .back 
@@ -145,6 +158,7 @@ cursor:pointer;
       width:350px;
    position:absolute;
       height:100%;
+      z-index:99;
 }
 .back ul 
 {

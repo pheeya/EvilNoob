@@ -58,7 +58,11 @@ data:function ()
         timer:null,
         animName:"slideForwards",
         
-        image:[ "https://bnetcmsus-a.akamaihd.net/cms/gallery/GXD4JNW026CS1559235465911.jpg" ,"https://bnetcmsus-a.akamaihd.net/cms/gallery/CKZ5QSH3FUKX1548873953399.jpg"  ,"https://bnetcmsus-a.akamaihd.net/cms/gallery/6BVTRM03YOXE1541100891084.jpg","https://bnetcmsus-a.akamaihd.net/cms/gallery/3AIPM0OPFGOY1562008099385.jpg", "https://bnetcmsus-a.akamaihd.net/cms/gallery/RNICIQUDGMF51561595505381.jpg"]}
+        image:[ "https://bnetcmsus-a.akamaihd.net/cms/gallery/GXD4JNW026CS1559235465911.jpg" 
+       , "/media/braverz.jpg"
+        ,"https://bnetcmsus-a.akamaihd.net/cms/gallery/CKZ5QSH3FUKX1548873953399.jpg" 
+         ,"https://bnetcmsus-a.akamaihd.net/cms/gallery/6BVTRM03YOXE1541100891084.jpg",
+         "https://bnetcmsus-a.akamaihd.net/cms/gallery/3AIPM0OPFGOY1562008099385.jpg"]}
 },
 
 mounted: function ()
@@ -261,7 +265,7 @@ cursor: pointer;
    margin-bottom:0;
    height:80px;
      transition:all .3s;
-     z-index:1;
+     z-index:99999;
      opacity:0;
 }
 
@@ -281,7 +285,7 @@ cursor: pointer;
    margin-bottom:0;
    height:80px;
   transition:all .3s;
-  z-index:1;
+  z-index:99999;
     opacity:0;
 }
 

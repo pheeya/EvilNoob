@@ -3,11 +3,11 @@
 <div class="menu">
 <ul>
     <h3 style="margin:0;padding:10px; color:white; font-weight:200;">EvilNoobs</h3>
-    <li><img src="https://blznav.akamaized.net/img/games/logo-codbo4-7794ee86f3e8be3e.png"><h4>GAME1</h4></li>
-    <li><img src="https://blznav.akamaized.net/img/games/logo-dest2-db71def7c167da44.png"><h4>GAME2</h4></li>
-    <li><img src="https://blznav.akamaized.net/img/games/logo-heroes-78cae505b7a524fb.png"><h4>GAME3</h4>  </li>
-    <li><img src="https://blznav.akamaized.net/img/games/logo-hs-93512467e87f82c6.png">  <h4>GAME4</h4></li>
-    <li><img src="https://blznav.akamaized.net/img/games/logo-codmw-d57b296321d6b444.png"><h4>GAME5</h4></li>
+    <li><img src="/media/braverz-logo.png"><h4>GAME1</h4></li>
+    <li><img src="/media/braverz-logo.png"><h4>GAME2</h4></li>
+    <li><img src="/media/braverz-logo.png"><h4>GAME3</h4>  </li>
+    <li><img src="/media/braverz-logo.png">  <h4>GAME4</h4></li>
+    <li><img src="/media/braverz-logo.png"><h4>GAME5</h4></li>
  
 
 </ul>
@@ -112,7 +112,7 @@ width:100%;
 }
 li img 
 {
-    width:80px;
+    width:120px;
     cursor:pointer;
 }
 ul li 
