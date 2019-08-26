@@ -59,7 +59,7 @@ data:function ()
         animName:"slideForwards",
         
         image:[ "https://bnetcmsus-a.akamaihd.net/cms/gallery/GXD4JNW026CS1559235465911.jpg" 
-       , "./media/braverz.jpg"
+       , "https://bnetcmsus-a.akamaihd.net/cms/gallery/6BVTRM03YOXE1541100891084.jpg"
         ,"https://bnetcmsus-a.akamaihd.net/cms/gallery/CKZ5QSH3FUKX1548873953399.jpg" 
          ,"https://bnetcmsus-a.akamaihd.net/cms/gallery/6BVTRM03YOXE1541100891084.jpg",
          "https://bnetcmsus-a.akamaihd.net/cms/gallery/3AIPM0OPFGOY1562008099385.jpg"]}
